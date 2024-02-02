@@ -8,7 +8,7 @@ import { Tvshows } from "./components/Tvshows";
 import { People } from "./components/People";
 import { TvDetails } from "./components/TvDetails";
 import { PersonDetails } from "./components/PersonDetails";
-import Moviedetails from "./components/Moviedetails";
+import MovieDetails from "./components/MovieDetails";
 import Trailer from "./components/templates/Trailer";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           <Route path="/trending" element={<Trending />} />
           <Route path="/popular" element={<Popular />} />
           <Route path="/movie" element={<Movie />} />
-          <Route path="/movie/details/:id" element={<Moviedetails />}>
+          <Route path="/movie/details/:id" element={<MovieDetails />}>
             <Route path="/movie/details/:id/trailer" element={<Trailer />} />
           </Route>
           <Route path="/tv" element={<Tvshows />} />

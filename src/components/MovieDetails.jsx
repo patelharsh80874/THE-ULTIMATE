@@ -11,7 +11,7 @@ import {
 import Loading from "./Loading";
 import HorizontalCards from "./templates/HorizontalCards";
 
-const Moviedetails = () => {
+const MovieDetails = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const { id } = useParams();
@@ -208,4 +208,4 @@ const Moviedetails = () => {
     <Loading />
   );
 };
-export default Moviedetails;
+export default MovieDetails;
