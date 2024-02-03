@@ -33,7 +33,7 @@ body{
   padding: em;
   color: #000000;
   cursor:rgb(0, 0, 0)nter;
-  font-size: 1em;
+  font-size:1vw;
   font-family: "Open Sans", sans-serif;
 }
 .select::-ms-expand {
@@ -42,19 +42,19 @@ body{
 .select {
   position: relative;
   display: flex;
-  width: 15em;
-  height: 3em;
+  width: 10vw;
+  height: 3vw;
   line-height: 3;
   background: #27272a;
   overflow: hidden;
-  border-radius: 0.25em;
+  border-radius: 5px;
 }
 .select::after {
   content: "\25BC";
   position: absolute;
   top: 0;
   right: 0;
-  padding: 0 1em;
+  padding: 0 0.5vw;
   background: #27272a;
   cursor: pointer;
   pointer-events: none;

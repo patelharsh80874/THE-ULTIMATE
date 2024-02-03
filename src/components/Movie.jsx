@@ -18,7 +18,9 @@ export const Movie = () => {
 
   const GetMovie = async () => {
     try {
-      const { data } = await axios.get(`/movie/${category}?page=${page}`);
+      const { data } = await axios.get(
+        `/movie/${category}?page=${page}`
+      );
 
       if (data.results.length > 0) {
         setmovie((prevState) => [...prevState, ...data.results]);
@@ -30,6 +32,7 @@ export const Movie = () => {
       console.log("error", error);
     }
   };
+
 
   const refershHandler = async () => {
     if (movie.length === 0) {
@@ -44,7 +47,7 @@ export const Movie = () => {
   useEffect(() => {
     refershHandler();
   }, [category]);
-
+  
   return movie.length > 0 ? (
     <div className=" w-screen h-screen bg-[#303030]">
       <div className=" px-5 w-full flex items-center bg-[#303030] ">
@@ -59,9 +62,10 @@ export const Movie = () => {
         <div className="flex gap-5">
           <Dropdown
             title="Category"
-            options={["popular", "top_rated", "upcoming", "now_playing"]}
+            options={["popular", "top_rated","now_playing","upcoming"]}
             func={(e) => setcategory(e.target.value)}
           />
+        
         </div>
       </div>
 

@@ -10,6 +10,7 @@ import { TvDetails } from "./components/TvDetails";
 import { PersonDetails } from "./components/PersonDetails";
 import MovieDetails from "./components/MovieDetails";
 import Trailer from "./components/templates/Trailer";
+import MovieProvider from "./components/MovieProvider";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           </Route>
           <Route path="/person" element={<People />} />
           <Route path="/person/details/:id" element={<PersonDetails />} />
+          <Route path="/MovieProvider" element={<MovieProvider />} />
         </Routes>
       </div>
     </>

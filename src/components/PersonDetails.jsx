@@ -28,9 +28,9 @@ export const PersonDetails = () => {
           className="hover:text-[#ffffdd]  hover:bg-lime-500 text-3xl font-semibold mr-2 rounded-full mt-1 duration-300 cursor-pointer text-zinc-400 ri-arrow-left-line"
         ></Link>
 
-        <a href={`/`}>
+        <Link to={`/`}>
           <i className="hover:text-yellow-300 duration-200 ri-home-4-line"></i>
-        </a>
+        </Link>
       </nav>
       {/* part 2  */}
       <div className="w-full flex">
@@ -46,25 +46,25 @@ export const PersonDetails = () => {
           <div className="text-2xl ml-5 text-white flex gap-3">
             <Link
               target="_blank"
-              href={`https://www.wikidata.org/wiki/${info.externalid.wikidata_id}`}
+               to={`https://www.wikidata.org/wiki/${info.externalid.wikidata_id}`}
             >
               <i className="hover:text-yellow-300 duration-200 ri-earth-fill"></i>
             </Link>
             <Link
               target="_blank"
-              href={`https://www.facebook.com/${info.externalid.facebook_id}`}
+              to={`https://www.facebook.com/${info.externalid.facebook_id}`}
             >
               <i className="hover:text-yellow-300 ri-facebook-circle-fill"></i>
             </Link>
             <Link
               target="_blank"
-              href={`https://www.instagram.com/${info.externalid.instagram_id}`}
+              to={`https://www.instagram.com/${info.externalid.instagram_id}`}
             >
               <i className="hover:text-yellow-300 ri-instagram-fill"></i>
             </Link>
             <Link
               target="_blank"
-              href={`https://twitter.com/${info.externalid.twitter_id}`}
+              to={`https://twitter.com/${info.externalid.twitter_id}`}
             >
               <i className="hover:text-yellow-300 ri-twitter-x-fill"></i>
             </Link>

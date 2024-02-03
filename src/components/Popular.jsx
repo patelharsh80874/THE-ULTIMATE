@@ -31,6 +31,7 @@ export const Popular = () => {
     }
   };
 
+
   const refershHandler = async () => {
     if (popular.length === 0) {
       GetPopular();

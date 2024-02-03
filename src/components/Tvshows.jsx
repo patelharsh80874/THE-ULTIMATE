@@ -9,7 +9,7 @@ import { Dropdown } from "./templates/Dropdown";
 
 export const Tvshows = () => {
   const navigate = useNavigate();
-  const [category, setcategory] = useState("airing_today");
+  const [category, setcategory] = useState("popular");
   const [tv, settv] = useState([]);
   const [page, setpage] = useState(1);
   const [hasMore, sethasMore] = useState(true);
@@ -30,6 +30,7 @@ export const Tvshows = () => {
       console.log("error", error);
     }
   };
+
 
   const refershHandler = async () => {
     if (tv.length === 0) {
@@ -59,7 +60,7 @@ export const Tvshows = () => {
         <div className="flex gap-5">
           <Dropdown
             title="Category"
-            options={["top_rated", "popular", "on_the_air", "airing_today"]}
+            options={["top_rated", "popular","on_the_air","airing_today"]}
             func={(e) => setcategory(e.target.value)}
           />
         </div>

@@ -24,10 +24,10 @@ function HorizontalCards({ data }) {
               alt=""
             />
             <div className="w-full h-[30%]">
-              <h1 className="text-white pl-3">
+              <h1 className="text-white text-[1.5vw] pl-3">
                 {d.original_title || d.title || d.name || d.original_name}
               </h1>
-              <p className=" text-zinc-400 text-sm pl-3 ">
+              <p className=" text-zinc-400 text-[1vw] leading-none pl-3 mt-[10px]">
                 {d.overview.slice(0, 70)}...
                 <span className="text-blue-600">more</span>
               </p>

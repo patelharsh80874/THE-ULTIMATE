@@ -32,7 +32,6 @@ export const Trending = () => {
       console.log("error", error);
     }
   };
-
   const refershHandler = async () => {
     if (trending.length === 0) {
       GetTrending();
@@ -54,7 +53,7 @@ export const Trending = () => {
           onClick={() => navigate(-1)}
           className="hover:text-[#ffffdd]  hover:bg-lime-500 text-3xl font-semibold mr-2 rounded-full mt-1 duration-300 cursor-pointer text-zinc-400 ri-arrow-left-line"
         ></i>
-        <h1 className=" text-2xl font-semibold text-zinc-300">
+        <h1 className=" text-[1.8vw] font-semibold text-zinc-300">
           Trending <small className="text-zinc-500">({category})</small>
         </h1>
         <Topnav />
@@ -69,6 +68,7 @@ export const Trending = () => {
             options={["week", "day"]}
             func={(e) => setduration(e.target.value)}
           />
+         
         </div>
       </div>
 
