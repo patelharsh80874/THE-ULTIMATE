@@ -29,7 +29,9 @@ export const PersonDetails = () => {
         ></Link>
 
         <Link to={`/`}>
+        <Link to={`/`}>
           <i className="hover:text-yellow-300 duration-200 ri-home-4-line"></i>
+        </Link>
         </Link>
       </nav>
       {/* part 2  */}
@@ -53,17 +55,20 @@ export const PersonDetails = () => {
             <Link
               target="_blank"
               to={`https://www.facebook.com/${info.externalid.facebook_id}`}
+              to={`https://www.facebook.com/${info.externalid.facebook_id}`}
             >
               <i className="hover:text-yellow-300 ri-facebook-circle-fill"></i>
             </Link>
             <Link
               target="_blank"
               to={`https://www.instagram.com/${info.externalid.instagram_id}`}
+              to={`https://www.instagram.com/${info.externalid.instagram_id}`}
             >
               <i className="hover:text-yellow-300 ri-instagram-fill"></i>
             </Link>
             <Link
               target="_blank"
+              to={`https://twitter.com/${info.externalid.twitter_id}`}
               to={`https://twitter.com/${info.externalid.twitter_id}`}
             >
               <i className="hover:text-yellow-300 ri-twitter-x-fill"></i>
