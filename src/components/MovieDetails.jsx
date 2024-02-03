@@ -42,25 +42,25 @@ const MovieDetails = () => {
           onClick={() => navigate(-1)}
           className="hover:text-[#ffffdd]  hover:bg-lime-500 text-3xl font-semibold mr-2 rounded-full mt-1 duration-300 cursor-pointer text-zinc-400 ri-arrow-left-line"
         ></Link>
-        <a target="_blank" href={info.detail.homepage}>
+        <Link target="_blank" to={info.detail.homepage}>
           <i className="hover:text-yellow-300 duration-200 ri-external-link-fill"></i>
-        </a>
-        <a
+        </Link>
+        <Link
           target="_blank"
-          href={`https://www.wikidata.org/wiki/${info.externalid.wikidata_id}`}
+          to={`https://www.wikidata.org/wiki/${info.externalid.wikidata_id}`}
         >
           <i className="hover:text-yellow-300 duration-200 ri-earth-fill"></i>
-        </a>
-        <a
+        </Link>
+        <Link
           className="hover:text-yellow-300 duration-200"
           target="_blank"
-          href={`https://www.imdb.com/title/${info.externalid.imdb_id}/`}
+          to={`https://www.imdb.com/title/${info.externalid.imdb_id}/`}
         >
           IMDB
-        </a>
-        <a href={`/`}>
+        </Link>
+        <Link to={`/`}>
           <i className="hover:text-yellow-300 duration-200 ri-home-4-line"></i>
-        </a>
+        </Link>
       </nav>
       {/* part 2 poster details */}
       <div className="w-full h-[70vh] flex">
