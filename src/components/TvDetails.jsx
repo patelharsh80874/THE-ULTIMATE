@@ -42,23 +42,23 @@ export const TvDetails = () => {
           onClick={() => navigate(-1)}
           className="hover:text-[#ffffdd]  hover:bg-lime-500 text-3xl font-semibold mr-2 rounded-full mt-1 duration-300 cursor-pointer text-zinc-400 ri-arrow-left-line"
         ></Link>
-        <Link target="_blank" href={info.detail.homepage}>
+        <Link target="_blank" to={info.detail.homepage}>
           <i className="hover:text-yellow-300 duration-200 ri-external-link-fill"></i>
         </Link>
         <Link
           target="_blank"
-          href={`https://www.wikidata.org/wiki/${info.externalid.wikidata_id}`}
+          to={`https://www.wikidata.org/wiki/${info.externalid.wikidata_id}`}
         >
           <i className="hover:text-yellow-300 duration-200 ri-earth-fill"></i>
         </Link>
         <Link
           className="hover:text-yellow-300 duration-200"
           target="_blank"
-          href={`https://www.imdb.com/title/${info.externalid.imdb_id}/`}
+          to={`https://www.imdb.com/title/${info.externalid.imdb_id}/`}
         >
           IMDB
         </Link>
-        <Link href={`/`}>
+        <Link to={`/`}>
           <i className="hover:text-yellow-300 duration-200 ri-home-4-line"></i>
         </Link>
       </nav>
