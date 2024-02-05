@@ -48,16 +48,16 @@ export const Trending = () => {
 
   return trending.length > 0 ? (
     <div className=" w-screen  h-screen  bg-[#303030]">
-      <div className=" px-5 w-full flex items-center bg-[#303030] ">
+      <div className=" px-5 sm:px-3 w-full flex   items-center bg-[#303030] ">
         <i
           onClick={() => navigate(-1)}
-          className="hover:text-[#ffffdd]  hover:bg-lime-500 text-3xl font-semibold mr-2 rounded-full mt-1 duration-300 cursor-pointer text-zinc-400 ri-arrow-left-line"
+          className="hover:text-[#ffffdd]  hover:bg-lime-500 text-3xl sm:text-2xl font-semibold mr-2 rounded-full mt-1 duration-300 cursor-pointer text-zinc-400 ri-arrow-left-line"
         ></i>
-        <h1 className=" text-[1.8vw] font-semibold text-zinc-300">
+        <h1 className=" text-[1.8vw] sm:text-[4vw] font-semibold text-zinc-300">
           Trending <small className="text-zinc-500">({category})</small>
-        </h1>
+        </h1> 
         <Topnav />
-        <div className="flex gap-5">
+        <div className="sm:hidden flex gap-5">
           <Dropdown
             title="Category"
             options={["movie", "tv"]}
@@ -68,9 +68,21 @@ export const Trending = () => {
             options={["week", "day"]}
             func={(e) => setduration(e.target.value)}
           />
-         
         </div>
+
       </div>
+      <div className="sm:block sm:flex sm:justify-center sm:gap-5 mt-3 mb-3  hidden">
+          <Dropdown
+            title="Category"
+            options={["movie", "tv"]}
+            func={(e) => setcategory(e.target.value)}
+          />
+          <Dropdown
+            title="Duration"
+            options={["week", "day"]}
+            func={(e) => setduration(e.target.value)}
+          />
+        </div>
 
       <InfiniteScroll
         dataLength={trending.length}

@@ -56,7 +56,7 @@ const MovieProvider = () => {
                     {getProviders.map((d, i) => (
                         <div
                             key={i}
-                            className="w-[10vw] flex flex-col  items-center h-[10vw] "
+                            className="w-[30vw] m-5 flex flex-col  items-center h-[10vw] "
                         >
                             <img
                                 className="rounded-md w-[6vw]"

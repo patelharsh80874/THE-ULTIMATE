@@ -53,11 +53,11 @@ export const Popular = () => {
           onClick={() => navigate(-1)}
           className="hover:text-[#ffffdd]  hover:bg-lime-500 text-3xl font-semibold mr-2 rounded-full mt-1 duration-300 cursor-pointer text-zinc-400 ri-arrow-left-line"
         ></i>
-        <h1 className=" w-[20%] text-2xl font-semibold text-zinc-300">
+        <h1 className=" w-[20%] text-2xl leading-none mr-3 font-semibold text-zinc-300">
           Popular <small className="text-zinc-500">({category})</small>
         </h1>
         <Topnav />
-        <div className="flex gap-5">
+        <div className="sm:hidden flex gap-5">
           <Dropdown
             title="Category"
             options={["tv", "movie"]}
@@ -65,6 +65,13 @@ export const Popular = () => {
           />
         </div>
       </div>
+      <div className="sm:block sm:flex sm:justify-center sm:mt-3 sm:mb-3 hidden">
+          <Dropdown
+            title="Category"
+            options={["tv", "movie"]}
+            func={(e) => setcategory(e.target.value)}
+          />
+        </div>
 
       <InfiniteScroll
         dataLength={popular.length}

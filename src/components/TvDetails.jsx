@@ -63,17 +63,17 @@ export const TvDetails = () => {
         </Link>
       </nav>
       {/* part 2 poster details */}
-      <div className="w-full h-[70vh] flex">
-        <div className="w-[30%] h-full flex items-center justify-center">
+      <div className="w-full h-[70vh] sm:h-[50vh]  flex sm:block bg-slate-400">
+        <div className="w-[30%] sm:w-full h-full flex items-center justify-center bg-slate-800">
           <img
-            className=" w-[55%] shadow-md rounded "
+            className=" w-[55%] sm:w-[60%] shadow-md rounded "
             src={`https://image.tmdb.org/t/p/original/${
               info.detail.poster_path || info.detail.backdrop_path
             }`}
             alt=""
           />
         </div>
-        <div className="w-[70%] h-full text-white">
+        <div className="w-[70%] sm:hidden h-full text-white">
           <h1 className="text-4xl mb-2 font-black">
             {info.detail.original_title ||
               info.detail.name ||
@@ -115,13 +115,57 @@ export const TvDetails = () => {
           </Link>
         </div>
       </div>
+      <div className=" hidden sm:block w-full  text-white bg-red-800">
+          <h1 className="text-4xl sm:text-5xl mb-2  sm:mb-5 font-black">
+            {info.detail.original_title ||
+              info.detail.name ||
+              info.detail.title ||
+              info.detail.original_name}
+            <small className="text-xl font-semibold text-zinc-300">
+              ({info.detail.first_air_date.split("-")[0]})
+            </small>
+          </h1>
+          <div className="w-full h-[25vh] bg-red-300 gap-3 text-zinc-100 items-center">
+            <div className="w-full gap-3 flex items-center bg-red-600">
+            {info.detail.vote_average && (
+              <div className=" text-white text-[1.3vw] sm:text-[4vw] bg-yellow-500 w-[3vw] h-[3vw]  sm:w-[10vw] sm:h-[10vw] flex items-center justify-center rounded-full">
+                {(info.detail.vote_average * 10).toFixed()} <sup>%</sup>
+              </div>
+            )}
+            <h1 className="font-bold  sm:text-2xl leading-none ">
+              User <br /> Score
+            </h1>
+            </div>
+            
+            <h1 className="text-2xl">{info.detail.first_air_date}</h1>
+            <h1 className="text-2xl">{info.detail.genres.map((g, i) => g.name).join(" , ")}</h1>
+            {info.detail.runtime && <h1 className="text-2xl">{info.detail.runtime}min</h1> }
+          </div>
+          <h3 className="text-xl sm:text-2xl mt-2 italic font-semibold">
+            {info.detail.tagline}
+          </h3>
+          <h2 className="text-2xl sm:text-3xl font-bold">overview</h2>
+          <p className="text-sm sm:text-xl sm:leading-none leading-none mb-3">{info.detail.overview}</p>
+
+          <h2 className="text-2xl sm:text-3xl font-bold">tv Translated</h2>
+          <p className="text-sm sm:text-xl sm:leading-none leading-none mb-5">
+            {info.translations.join(" , ")}
+          </p>
+          <Link
+            className="px-5 py-4 inline-block bg-[#ffffdd] rounded-md text-black font-semibold"
+            to={`${pathname}/trailer`}
+          >
+            <i className=" mr-2 ri-play-fill"></i>
+            Play Trailer
+          </Link>
+        </div>
       {/* part 3 watch providers */}
       {/* <div className="w-full h-[30vh] bg-blue-300"> */}
       {info.watchproviders &&
       info.watchproviders.flatrate &&
       info.watchproviders.flatrate ? (
         <div className="w-full h-[10%] flex gap-3 items-center">
-          <h1 className="font-semibold w-[15%] flex justify-end text-white">
+          <h1 className="font-semibold  flex justify-end text-white">
             Available On Platforms
           </h1>
           {info.watchproviders &&

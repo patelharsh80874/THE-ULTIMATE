@@ -11,6 +11,7 @@ export const Home = () => {
   document.title = "THE ULTIMATE | Homepage";
   const [wallpaper, setwallpaper] = useState(null);
   const [trending, settrendin] = useState(null);
+  const [menuset, setmenuset] = useState(false)
   const [category, setcategory] = useState("all");
 
   const GetHeaderWallpaper = async () => {
@@ -33,6 +34,11 @@ export const Home = () => {
     }
   };
 
+  function menuhendlaer() {
+    setmenuset(!menuset)
+    
+  }
+
   useEffect(() => {
     GetTrending();
     !wallpaper && GetHeaderWallpaper();
@@ -41,12 +47,12 @@ export const Home = () => {
 
   return wallpaper && trending ? (
     <>
-      <Sidenav />
-      <div className="w-[80%] min-h-full overflow-auto overflow-x-hidden ">
-        <Topnav />
+      <Sidenav menuset={menuset} />
+      <div className="w-[80%] sm:w-full min-h-full overflow-auto overflow-x-hidden ">
+        <Topnav menuhendlaer={menuhendlaer}  menuset={menuset} />
         <Header data={wallpaper} />
 
-        <div className=" flex justify-between items-center p-3">
+        <div className=" flex justify-between items-center p-3 ">
           <h1 className="text-2xl  font-semibold  text-zinc-300">Trending</h1>
           <Dropdown
             title="Filter"

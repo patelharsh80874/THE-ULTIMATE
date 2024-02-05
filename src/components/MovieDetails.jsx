@@ -37,7 +37,7 @@ const MovieDetails = () => {
       className="w-full relative overflow-x-hidden p-5"
     >
       {/* part 1 navigation */}
-      <nav className="w-full h-[10vh]  text-zinc-100 flex  gap-7 items-center font-semibold text-1xl  ">
+      <nav className="w-full h-[10vh] sm:mb-3 sm:h-[5vw]  text-zinc-100 flex  gap-7 items-center font-semibold text-1xl  ">
         <Link
           onClick={() => navigate(-1)}
           className="hover:text-[#ffffdd]  hover:bg-lime-500 text-3xl font-semibold mr-2 rounded-full mt-1 duration-300 cursor-pointer text-zinc-400 ri-arrow-left-line"
@@ -63,17 +63,17 @@ const MovieDetails = () => {
         </Link>
       </nav>
       {/* part 2 poster details */}
-      <div className="w-full h-[70vh] flex">
-        <div className="w-[30%] h-full flex items-center justify-center">
+      <div className="w-full h-[70vh] sm:h-[50vh] bg-blue-300 flex sm:block">
+        <div className="w-[30%] sm:w-full h-full bg-red-200 flex items-center justify-center">
           <img
-            className=" w-[55%] shadow-md rounded "
+            className=" w-[55%] sm:w-[60%] shadow-md rounded "
             src={`https://image.tmdb.org/t/p/original/${
               info.detail.poster_path || info.detail.backdrop_path
             }`}
             alt=""
           />
         </div>
-        <div className="w-[70%] h-full text-white">
+        <div className="w-[70%]  sm:hidden bg-green-200 h-full text-white">
           <h1 className="text-4xl mb-2 font-black">
             {info.detail.original_title ||
               info.detail.name ||
@@ -115,13 +115,58 @@ const MovieDetails = () => {
           </Link>
         </div>
       </div>
+      <div className=" hidden sm:block w-full mb-5  bg-blue-300 text-white">
+        <h1 className="text-4xl sm:text-2xl mb-2 font-black">
+          {info.detail.original_title ||
+            info.detail.name ||
+            info.detail.title ||
+            info.detail.original_name}
+          <small className="text-xl font-semibold text-zinc-300">
+            ({info.detail.release_date.split("-")[0]})
+          </small>
+        </h1>
+        <div className="w-full h-[10%] sm:h-[25%] mt-3 sm:block bg-neutral-400 gap-3 text-zinc-100 items-center">
+          {info.detail.vote_average && (
+            <div className="w-full flex gap-3 items-center">
+              <div className=" text-white  text-[1.3vw] sm:text-[4vw] bg-yellow-500 w-[3vw] h-[3vw] sm:w-[10vw] sm:h-[10vw] flex items-center justify-center rounded-full">
+                {(info.detail.vote_average * 10).toFixed()} <sup>%</sup>
+              </div>
+              <h1 className="font-bold sm:text-2xl  leading-none ">
+            User <br /> Score
+          </h1>
+            </div>
+          )}
+        
+          <h1 className="text-2xl">{info.detail.release_date}</h1>
+          <h1 className="text-2xl">{info.detail.genres.map((g, i) => g.name).join(" , ")}</h1>
+          {info.detail.runtime && <h1 className="text-2xl">{info.detail.runtime}min</h1> }
+          
+        </div>
+        <h3 className="text-xl sm:text-2xl mt-2 italic font-semibold">
+          {info.detail.tagline}
+        </h3>
+        <h2 className="text-2xl  sm:text-3xl font-bold">overview</h2>
+        <p className="text-sm sm:text-xl sm:leading-none leading-none mb-3">{info.detail.overview}</p>
+
+        <h2 className="text-2xl sm:text-3xl font-bold">Movie Translated</h2>
+        <p className="text-sm sm:text-xl sm:leading-none leading-none mb-5">
+          {info.translations.join(" , ")}
+        </p>
+        <Link
+          className="px-5 py-4 inline-block bg-[#ffffdd] rounded-md text-black font-semibold"
+          to={`${pathname}/trailer`}
+        >
+          <i className=" mr-2 ri-play-fill"></i>
+          Play Trailer
+        </Link>
+      </div>
       {/* part 3 watch providers */}
       {/* <div className="w-full h-[30vh] text-white"> */}
       {info.watchproviders &&
       info.watchproviders.flatrate &&
       info.watchproviders.flatrate ? (
-        <div className="w-full h-[10%] flex gap-3 items-center">
-          <h1 className="font-semibold w-[15%] flex justify-end text-white">
+        <div className="w-full h-[10%]  flex gap-3 items-center">
+          <h1 className="font-semibold  flex justify-end text-white">
             Available On Platforms
           </h1>
           {info.watchproviders &&
@@ -189,7 +234,7 @@ const MovieDetails = () => {
 
       {/* part 4 recommendations and similar  */}
 
-      <div className="mt-5">
+      <div className="mt-5 ">
         <hr />
         <h1 className="text-2xl font-semibold text-white mt-3 ">
           Recommendations & Similar Stuff

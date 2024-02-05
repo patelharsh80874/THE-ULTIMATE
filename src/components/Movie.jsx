@@ -55,11 +55,11 @@ export const Movie = () => {
           onClick={() => navigate(-1)}
           className="hover:text-[#ffffdd]  hover:bg-lime-500 text-3xl font-semibold mr-2 rounded-full mt-1 duration-300 cursor-pointer text-zinc-400 ri-arrow-left-line"
         ></i>
-        <h1 className="text-2xl font-semibold text-zinc-300">
+        <h1 className="text-2xl sm:text-xl font-semibold leading-none text-zinc-300">
           Movie<small className="text-zinc-500">({category})</small>
         </h1>
         <Topnav />
-        <div className="flex gap-5">
+        <div className="sm:hidden flex gap-5">
           <Dropdown
             title="Category"
             options={["popular", "top_rated","now_playing","upcoming"]}
@@ -68,6 +68,14 @@ export const Movie = () => {
         
         </div>
       </div>
+      <div className="hidden sm:block sm:flex sm:justify-center sm:mt-3 sm:mb-3">
+          <Dropdown
+            title="Category"
+            options={["popular", "top_rated","now_playing","upcoming"]}
+            func={(e) => setcategory(e.target.value)}
+          />
+        
+        </div>
 
       <InfiniteScroll
         dataLength={movie.length}

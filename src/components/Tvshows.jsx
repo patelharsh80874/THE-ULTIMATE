@@ -57,7 +57,7 @@ export const Tvshows = () => {
           tv<small className="text-zinc-500">({category})</small>
         </h1>
         <Topnav />
-        <div className="flex gap-5">
+        <div className=" sm:hidden flex gap-5">
           <Dropdown
             title="Category"
             options={["top_rated", "popular","on_the_air","airing_today"]}
@@ -65,6 +65,13 @@ export const Tvshows = () => {
           />
         </div>
       </div>
+      <div className="hidden sm:block sm:flex sm:justify-center sm:mb-3 sm:mt-3 ">
+          <Dropdown
+            title="Category"
+            options={["top_rated", "popular","on_the_air","airing_today"]}
+            func={(e) => setcategory(e.target.value)}
+          />
+        </div>
 
       <InfiniteScroll
         dataLength={tv.length}

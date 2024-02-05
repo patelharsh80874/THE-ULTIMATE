@@ -8,7 +8,7 @@ export const Cards = ({ data, title }) => {
       {data.map((c, i) => (
         <Link
           to={`/${c.mmedia_type || title}/details/${c.id}`}
-          className="w-[20%] mb-5 relative "
+          className="w-[40%] mb-5 relative "
           key={i}
         >
           <img
@@ -22,11 +22,11 @@ export const Cards = ({ data, title }) => {
             }
             alt=""
           />
-          <h1 className="text-[2vw] w-[80%] m-auto text-center text-zinc-300 mt-3 font-semibold">
+          <h1 className="text-[2vw] sm:text-[3vw] w-[80%] m-auto text-center text-zinc-300 mt-3 font-semibold">
             {c.title || c.original_title || c.name  || c.original_name}
           </h1>
           {c.vote_average>0 && (
-            <div className="absolute right-0 bottom-36 -translate-x-[20%] -translate-y-[50%] text-white text-[1.3vw] bg-yellow-500 w-[3vw] h-[3vw] flex items-center justify-center rounded-full">
+            <div className="sm:hidden absolute right-0 bottom-36 -translate-x-[20%] -translate-y-[50%] text-white text-[1.3vw] bg-yellow-500 w-[3vw] h-[3vw] flex items-center justify-center rounded-full">
               {(c.vote_average * 10).toFixed()} <sup>%</sup>
             </div>
           )}
