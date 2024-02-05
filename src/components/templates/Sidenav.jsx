@@ -7,7 +7,7 @@ export const Sidenav = ({menuset}) => {
       
 
   return (
-    <div className={`sidenav w-[20%]  sm:z-50 sm:w-[50%] sm:absolute ${menuset ? "sm:left-0" : "sm:left-[-100%]"}  min-h-[100vh] overflow-y-auto bg-[#5f727a]  p-5`}>
+    <div className={`sidenav w-[20%] sm:overflow-y-auto sm:z-50 sm:w-[50%] sm:absolute ${menuset ? "sm:left-0" : "sm:left-[-100%]"}  h-[100vh] overflow-y-auto bg-[#5f727a]  p-5`}>
         <h1 className='font-bold  mt-5 items-center'>
         {/* <i className=" text-[#A2C579] ri-tv-fill text-2xl"></i> */}
         <img  width={150}  className='rounded-full mr-3' src={logo} alt="" />
