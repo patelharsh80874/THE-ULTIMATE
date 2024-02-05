@@ -63,8 +63,8 @@ const MovieDetails = () => {
         </Link>
       </nav>
       {/* part 2 poster details */}
-      <div className="w-full h-[70vh] sm:h-[50vh] bg-blue-300 flex sm:block">
-        <div className="w-[30%] sm:w-full h-full bg-red-200 flex items-center justify-center">
+      <div className="w-full h-[70vh] sm:h-[50vh]  flex sm:block">
+        <div className="w-[30%] sm:w-full h-full flex items-center justify-center">
           <img
             className=" w-[55%] sm:w-[60%] shadow-md rounded "
             src={`https://image.tmdb.org/t/p/original/${
@@ -73,7 +73,7 @@ const MovieDetails = () => {
             alt=""
           />
         </div>
-        <div className="w-[70%]  sm:hidden bg-green-200 h-full text-white">
+        <div className="w-[70%]  sm:hidden h-full text-white">
           <h1 className="text-4xl mb-2 font-black">
             {info.detail.original_title ||
               info.detail.name ||
@@ -115,7 +115,7 @@ const MovieDetails = () => {
           </Link>
         </div>
       </div>
-      <div className=" hidden sm:block w-full mb-5  bg-blue-300 text-white">
+      <div className=" hidden sm:block w-full mb-5  text-white">
         <h1 className="text-4xl sm:text-2xl mb-2 font-black">
           {info.detail.original_title ||
             info.detail.name ||
@@ -125,7 +125,7 @@ const MovieDetails = () => {
             ({info.detail.release_date.split("-")[0]})
           </small>
         </h1>
-        <div className="w-full h-[10%] sm:h-[25%] mt-3 sm:block bg-neutral-400 gap-3 text-zinc-100 items-center">
+        <div className="w-full h-[10%] sm:h-[25%] mt-3 sm:block gap-3 text-zinc-100 items-center">
           {info.detail.vote_average && (
             <div className="w-full flex gap-3 items-center">
               <div className=" text-white  text-[1.3vw] sm:text-[4vw] bg-yellow-500 w-[3vw] h-[3vw] sm:w-[10vw] sm:h-[10vw] flex items-center justify-center rounded-full">
@@ -166,7 +166,7 @@ const MovieDetails = () => {
       info.watchproviders.flatrate &&
       info.watchproviders.flatrate ? (
         <div className="w-full h-[10%]  flex gap-3 items-center">
-          <h1 className="font-semibold  flex justify-end text-white">
+          <h1 className="font-semibold sm:ml-3 flex justify-end text-white">
             Available On Platforms
           </h1>
           {info.watchproviders &&
@@ -189,7 +189,7 @@ const MovieDetails = () => {
       info.watchproviders.rent &&
       info.watchproviders.rent ? (
         <div className="w-full h-[10%] flex gap-3 items-center">
-          <h1 className="font-semibold w-[15%] flex justify-end text-white">
+          <h1 className="font-semibold w-[15%] sm:ml-3 flex justify-end text-white">
             Available On Rent
           </h1>
           {info.watchproviders &&
@@ -212,7 +212,7 @@ const MovieDetails = () => {
       info.watchproviders.buy &&
       info.watchproviders.buy ? (
         <div className="w-full h-[10%] flex gap-3 items-center">
-          <h1 className="font-semibold w-[15%] flex justify-end text-white">
+          <h1 className="font-semibold w-[15%] sm:ml-3 flex justify-end text-white">
             Available To Buy
           </h1>
           {info.watchproviders &&

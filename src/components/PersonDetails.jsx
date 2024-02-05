@@ -21,7 +21,7 @@ export const PersonDetails = () => {
     };
   }, [id]);
   return info ? (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full overflow-x-hidden bg-slate-600">
       <nav className="w-full h-[10vh]  text-zinc-100 flex  gap-7 items-center font-semibold px-5 text-1xl  ">
         <Link
           onClick={() => navigate(-1)}
@@ -33,17 +33,17 @@ export const PersonDetails = () => {
         </Link>
       </nav>
       {/* part 2  */}
-      <div className="w-full flex">
+      <div className="w-full flex sm:block ">
         {/* part 2 left  */}
-        <div className="w-[25%] pl-[5%] pt-5 flex flex-col items-start text-zinc-300 ">
+        <div className="w-[25%] sm:w-full pl-[5%] pt-5 flex flex-col items-start text-zinc-300 ">
           <img
-            className=" w-[70%] shadow-md rounded "
+            className=" w-[70%]  shadow-md rounded "
             src={`https://image.tmdb.org/t/p/original/${info.detail.profile_path}`}
             alt=""
           />
           <hr className="w-[70%] mt-5 " />
           {/* external links */}
-          <div className="text-2xl ml-5 text-white flex gap-3">
+          <div className="text-2xl ml-5  text-white flex gap-3">
             <Link
               target="_blank"
                to={`https://www.wikidata.org/wiki/${info.externalid.wikidata_id}`}
@@ -101,7 +101,7 @@ export const PersonDetails = () => {
           </p>
         </div>
         {/* part 3 right information */}
-        <div className="w-[75%] p-5 text-zinc-200 ">
+        <div className="w-[75%] sm:w-full  p-5 text-zinc-200 ">
           <h1 className=" text-5xl font-black mb-3 ">{info.detail.name}</h1>
           {info.detail.biography && (
             <h1 className=" text-2xl font-semibold  ">Biography</h1>

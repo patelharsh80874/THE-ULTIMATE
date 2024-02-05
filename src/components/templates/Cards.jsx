@@ -8,7 +8,7 @@ export const Cards = ({ data, title }) => {
       {data.map((c, i) => (
         <Link
           to={`/${c.mmedia_type || title}/details/${c.id}`}
-          className="w-[40%] mb-5 relative "
+          className="w-[20%] sm:w-[40%] mb-5 relative "
           key={i}
         >
           <img

@@ -7,11 +7,11 @@ export const Sidenav = ({menuset}) => {
       
 
   return (
-    <div className={`sidenav w-[20%] sm:z-50 sm:w-[50%] sm:absolute ${menuset ? "sm:left-0" : "sm:left-[-100%]"}  min-h-[100vh] overflow-y-auto bg-[#5f727a]  p-5`}>
-        <h1 className='font-bold flex mt-5 items-center'>
+    <div className={`sidenav w-[20%]  sm:z-50 sm:w-[50%] sm:absolute ${menuset ? "sm:left-0" : "sm:left-[-100%]"}  min-h-[100vh] overflow-y-auto bg-[#5f727a]  p-5`}>
+        <h1 className='font-bold  mt-5 items-center'>
         {/* <i className=" text-[#A2C579] ri-tv-fill text-2xl"></i> */}
-        <img  width={50} className='rounded-full mr-3' src={logo} alt="" />
-            <span className=' text-[2vw] sm:text-[4vw] text-center  font-thin'>THE ULTIMATE</span>
+        <img  width={150}  className='rounded-full mr-3' src={logo} alt="" />
+            <span className=' text-[2vw] sm:text-[6vw] text-center  font-thin'>THE ULTIMATE</span>
         </h1>
         <nav className='flex flex-col text-xl gap-2'>
             <h1 className=' mt-10 mb-5 font-semibold text-xl '>New Feeds</h1>

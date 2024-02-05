@@ -37,7 +37,7 @@ export const TvDetails = () => {
       className="w-full relative overflow-x-hidden p-5"
     >
       {/* part 1 navigation */}
-      <nav className="w-full h-[10vh]  text-zinc-100 flex  gap-7 items-center font-semibold text-1xl  ">
+      <nav className="w-full h-[10vh] sm:h-[5vh] text-zinc-100 flex  gap-7 items-center font-semibold text-1xl  ">
         <Link
           onClick={() => navigate(-1)}
           className="hover:text-[#ffffdd]  hover:bg-lime-500 text-3xl font-semibold mr-2 rounded-full mt-1 duration-300 cursor-pointer text-zinc-400 ri-arrow-left-line"
@@ -63,8 +63,8 @@ export const TvDetails = () => {
         </Link>
       </nav>
       {/* part 2 poster details */}
-      <div className="w-full h-[70vh] sm:h-[50vh]  flex sm:block bg-slate-400">
-        <div className="w-[30%] sm:w-full h-full flex items-center justify-center bg-slate-800">
+      <div className="w-full h-[70vh] sm:h-[50vh]  flex sm:block">
+        <div className="w-[30%] sm:w-full h-full flex items-center justify-center">
           <img
             className=" w-[55%] sm:w-[60%] shadow-md rounded "
             src={`https://image.tmdb.org/t/p/original/${
@@ -115,7 +115,7 @@ export const TvDetails = () => {
           </Link>
         </div>
       </div>
-      <div className=" hidden sm:block w-full  text-white bg-red-800">
+      <div className=" hidden sm:block w-full  text-white">
           <h1 className="text-4xl sm:text-5xl mb-2  sm:mb-5 font-black">
             {info.detail.original_title ||
               info.detail.name ||
@@ -125,8 +125,8 @@ export const TvDetails = () => {
               ({info.detail.first_air_date.split("-")[0]})
             </small>
           </h1>
-          <div className="w-full h-[25vh] bg-red-300 gap-3 text-zinc-100 items-center">
-            <div className="w-full gap-3 flex items-center bg-red-600">
+          <div className="w-full h-[25vh] gap-3 text-zinc-100 items-center">
+            <div className="w-full gap-3 flex items-center">
             {info.detail.vote_average && (
               <div className=" text-white text-[1.3vw] sm:text-[4vw] bg-yellow-500 w-[3vw] h-[3vw]  sm:w-[10vw] sm:h-[10vw] flex items-center justify-center rounded-full">
                 {(info.detail.vote_average * 10).toFixed()} <sup>%</sup>
