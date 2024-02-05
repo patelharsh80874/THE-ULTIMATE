@@ -26,7 +26,7 @@ export const Topnav = ({ menuhendlaer, menuset }) => {
       <div className="w-full h-[15vh] sm:h-[5vh] relative flex justify-start gap-10 items-center ">
         <i
           onClick={() => menuhendlaer()}
-          className={` ${pathname === "/" ? "block" : "hidden"} z-50 menuicon  ${
+          className={` hidden sm:block ${pathname === "/" ? "block" : "hidden"} z-50 menuicon  ${
             menuset ? "ri-close-fill" : "ri-menu-line"
           } sm:text-[5vw] text-white`}
         ></i>
