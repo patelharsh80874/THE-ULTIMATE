@@ -56,10 +56,10 @@ const MovieProvider = () => {
                     {getProviders.map((d, i) => (
                         <div
                             key={i}
-                            className="w-[30vw] m-5 flex flex-col  items-center h-[10vw] "
+                            className="w-[10vw] sm:w-[30vw] m-5  flex flex-col  items-center h-[10vw] "
                         >
                             <img
-                                className="rounded-md w-[6vw]"
+                                className="rounded-md w-[6vw] sm:w-[10vw]"
                                 src={`https://image.tmdb.org/t/p/original/${d.logo_path}`}
                                 alt=""
                             />
