@@ -12,7 +12,7 @@ import MovieDetails from "./components/MovieDetails";
 import Trailer from "./components/templates/Trailer";
 import MovieProvider from "./components/MovieProvider";
 import Plyer from "./components/templates/Plyer";
-import Plyer2 from "./components/templates/plyer2";
+import PlyerTwo from "./components/templates/PlyerTwo";
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
           <Route path="/movie/details/:id" element={<MovieDetails />}>
             <Route path="/movie/details/:id/trailer" element={<Trailer />} />
             <Route path="/movie/details/:id/player" element={<Plyer />} />
-            <Route path="/movie/details/:id/player2" element={<Plyer2 />} />
+            <Route path="/movie/details/:id/playertwo" element={<PlyerTwo />} />
           </Route>
           <Route path="/tv" element={<Tvshows />} />
           <Route path="/tv/details/:id" element={<TvDetails />}>

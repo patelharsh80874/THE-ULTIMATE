@@ -122,7 +122,7 @@ const MovieDetails = () => {
           </Link>
           <Link
             className=" ml-3 px-5 py-4 inline-block bg-[#ffffdd] rounded-md text-black font-semibold"
-            to={`${pathname}/player2`}
+            to={`${pathname}/playertwo`}
           >
             <i className=" mr-2 ri-play-fill"></i>
             Play <sub>Link 2</sub>
@@ -182,7 +182,7 @@ const MovieDetails = () => {
           </Link>
           <Link
             className=" ml-3 px-3 py-2 inline-block bg-[#ffffdd] rounded-md text-black font-semibold"
-            to={`${pathname}/player2`}
+            to={`${pathname}/playertwo`}
           >
             <i className=" mr-2 ri-play-fill"></i>
             Play <sub>Link 2</sub>

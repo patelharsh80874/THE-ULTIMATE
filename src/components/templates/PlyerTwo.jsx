@@ -3,7 +3,7 @@ import ReactPlayer from "react-player";
 import { useSelector } from "react-redux";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import Notfound from "../Notfound";
-const Plyer2 = () => {
+const PlyerTwo = () => {
     const Navigate = useNavigate();
     const { pathname } = useLocation();
     const category = pathname.includes("movie") ? "movie" : "tv";
@@ -45,4 +45,4 @@ const Plyer2 = () => {
     );
 }
 
-export default Plyer2
+export default PlyerTwo
