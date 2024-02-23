@@ -113,6 +113,20 @@ const MovieDetails = () => {
             <i className=" mr-2 ri-play-fill"></i>
             Play Trailer
           </Link>
+          <Link
+            className=" ml-3 px-5 py-4 inline-block bg-[#ffffdd] rounded-md text-black font-semibold"
+            to={`${pathname}/player`}
+          >
+            <i className=" mr-2 ri-play-fill"></i>
+            Play <sub>Link 1</sub>
+          </Link>
+          <Link
+            className=" ml-3 px-5 py-4 inline-block bg-[#ffffdd] rounded-md text-black font-semibold"
+            to={`${pathname}/player2`}
+          >
+            <i className=" mr-2 ri-play-fill"></i>
+            Play <sub>Link 2</sub>
+          </Link>
         </div>
       </div>
       <div className=" hidden sm:block w-full mb-5  text-white">
@@ -153,12 +167,26 @@ const MovieDetails = () => {
           {info.translations.join(" , ")}
         </p>
         <Link
-          className="px-5 py-4 inline-block bg-[#ffffdd] rounded-md text-black font-semibold"
+          className="px-3 py-2 inline-block bg-[#ffffdd] rounded-md text-black font-semibold"
           to={`${pathname}/trailer`}
         >
           <i className=" mr-2 ri-play-fill"></i>
           Play Trailer
         </Link>
+        <Link
+            className=" ml-3 px-3 py-2 inline-block bg-[#ffffdd] rounded-md text-black font-semibold"
+            to={`${pathname}/player`}
+          >
+            <i className=" mr-2 ri-play-fill"></i>
+            Play <sub>Link 1</sub>
+          </Link>
+          <Link
+            className=" ml-3 px-3 py-2 inline-block bg-[#ffffdd] rounded-md text-black font-semibold"
+            to={`${pathname}/player2`}
+          >
+            <i className=" mr-2 ri-play-fill"></i>
+            Play <sub>Link 2</sub>
+          </Link>
       </div>
       {/* part 3 watch providers */}
       {/* <div className="w-full h-[30vh] text-white"> */}
