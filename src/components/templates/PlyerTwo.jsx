@@ -9,7 +9,7 @@ const PlyerTwo = () => {
     const category = pathname.includes("movie") ? "movie" : "tv";
     // const ytvideo = useSelector((state) => state[category].info.videos);
     const ytvideo = useSelector((state) => state[category].info.detail.id);
-    console.log(ytvideo);
+    // console.log(ytvideo);
     return ytvideo ? (
       <div className="absolute top-0 bg-[rgba(0,0,0,0.9)] text-white w-screen h-screen flex items-center justify-center">
         <Link

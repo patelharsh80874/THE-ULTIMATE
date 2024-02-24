@@ -113,6 +113,13 @@ export const TvDetails = () => {
             <i className=" mr-2 ri-play-fill"></i>
             Play Trailer
           </Link>
+          <Link
+            className=" ml-3 px-5 py-4 inline-block bg-[#ffffdd] rounded-md text-black font-semibold"
+            to={`${pathname}/player`}
+          >
+            <i className=" mr-2 ri-play-fill"></i>
+            Play <sub>Link 1</sub>
+          </Link>
         </div>
       </div>
       <div className=" hidden sm:block w-full  text-white">
@@ -157,6 +164,13 @@ export const TvDetails = () => {
           >
             <i className=" mr-2 ri-play-fill"></i>
             Play Trailer
+          </Link>
+          <Link
+            className=" ml-3 px-5 py-4 inline-block bg-[#ffffdd] rounded-md text-black font-semibold"
+            to={`${pathname}/player`}
+          >
+            <i className=" mr-2 ri-play-fill"></i>
+            Play <sub>Link 1</sub>
           </Link>
         </div>
       {/* part 3 watch providers */}
