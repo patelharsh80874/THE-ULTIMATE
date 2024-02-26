@@ -61,6 +61,7 @@ export const Home = () => {
           />
         </div>
         <HorizontalCards data={trending} />
+        
       </div>
     </>
   ) : (

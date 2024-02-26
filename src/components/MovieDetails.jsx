@@ -276,6 +276,15 @@ const MovieDetails = () => {
         />
         <Outlet/>
       </div>
+      <div className="flex  gap-3 text-2xl text-white  ">
+          <h1>MADE BY ❤️ HARSH PATEL</h1>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/harsh_patel_80874/"
+          >
+            <i className=" ri-instagram-fill"></i>
+          </a>
+        </div>
     </div>
   ) : (
     <Loading />
