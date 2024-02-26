@@ -274,7 +274,7 @@ const MovieDetails = () => {
               : info.similar
           }
         />
-        <Outlet />
+        <Outlet/>
       </div>
     </div>
   ) : (
