@@ -1,14 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import noimg from "/noimg.jpg";
 
 function HorizontalCards({ data }) {
+  const { pathname } = useLocation();
   return (
     <div className=" w-full max-h-[100vh] sm:max-h-[40vh]  flex gap-5 overflow-x-auto mb-5 p-5 ">
       {data.length > 0 ? (
         data.map((d, i) => (
           <Link
-            to={`/${d.media_type === "movie" ? "movie" : "tv"}/details/${d.id}`}
+            to={
+              d.season_number
+                ? `${pathname}/season/${d.season_number}`
+                : `/${d.media_type === "movie" ? "movie" : "tv"}/details/${
+                    d.id
+                  }`
+            }
             key={i}
             className="min-w-[25%] sm:min-w-[50%]   mb-3  flex flex-col gap-3 text-xl font-semibold bg-zinc-900 rounded"
           >

@@ -13,6 +13,8 @@ import Trailer from "./components/templates/Trailer";
 import MovieProvider from "./components/MovieProvider";
 import Plyer from "./components/templates/Plyer";
 import PlyerTwo from "./components/templates/PlyerTwo";
+import TvSeason from "./components/TvSeason";
+import PlyerThree from "./components/templates/PlyerThree";
 
 function App() {
   return (
@@ -33,6 +35,9 @@ function App() {
             <Route path="/tv/details/:id/trailer" element={<Trailer />} />
             <Route path="/tv/details/:id/player" element={<Plyer />} />
           </Route>
+          <Route path="/tv/details/:id/season/:id" element={<TvSeason />} >
+          <Route path="/tv/details/:id/season/:id/episode/:id" element={<PlyerThree />} />
+            </Route>
           <Route path="/person" element={<People />} />
           <Route path="/person/details/:id" element={<PersonDetails />} />
           <Route path="/MovieProvider" element={<MovieProvider />} />
