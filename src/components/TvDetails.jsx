@@ -39,7 +39,8 @@ export const TvDetails = () => {
       {/* part 1 navigation */}
       <nav className="w-full h-[10vh] sm:h-[5vh] text-zinc-100 flex  gap-7 items-center font-semibold text-1xl  ">
         <Link
-          onClick={() => navigate(-1)}
+        to={"/tv"}
+          // onClick={() => navigate(-1)}
           className="hover:text-[#ffffdd]  hover:bg-lime-500 text-3xl font-semibold mr-2 rounded-full mt-1 duration-300 cursor-pointer text-zinc-400 ri-arrow-left-line"
         ></Link>
         <Link target="_blank" to={info.detail.homepage}>
@@ -120,6 +121,7 @@ export const TvDetails = () => {
             <i className=" mr-2 ri-play-fill"></i>
             Play <sub>Link 1</sub>
           </Link>
+          <h1 className="text-red-400 font-semibold mt-2">Note : Connect <a className="text-blue-600" target="_blank" href="https://1.1.1.1/">DNS</a> , If Link Not Working. </h1>
         </div>
       </div>
       <div className=" hidden sm:block w-full  text-white">
@@ -172,6 +174,7 @@ export const TvDetails = () => {
             <i className=" mr-2 ri-play-fill"></i>
             Play <sub>Link 1</sub>
           </Link>
+          <h1 className="text-red-400 font-semibold mt-2">Note : Connect <a className="text-blue-600" target="_blank" href="https://1.1.1.1/">DNS</a> , If Link Not Working. </h1>
         </div>
       {/* part 3 watch providers */}
       {/* <div className="w-full h-[30vh] bg-blue-300"> */}

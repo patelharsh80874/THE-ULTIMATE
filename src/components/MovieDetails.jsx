@@ -39,7 +39,8 @@ const MovieDetails = () => {
       {/* part 1 navigation */}
       <nav className="w-full h-[10vh] sm:mb-3 sm:h-[5vw]  text-zinc-100 flex  gap-7 items-center font-semibold text-1xl  ">
         <Link
-          onClick={() => navigate(-1)}
+          // onClick={() => navigate(-1)}
+          to={`/movie`}
           className="hover:text-[#ffffdd]  hover:bg-lime-500 text-3xl font-semibold mr-2 rounded-full mt-1 duration-300 cursor-pointer text-zinc-400 ri-arrow-left-line"
         ></Link>
         <Link target="_blank" to={info.detail.homepage}>
@@ -127,6 +128,7 @@ const MovieDetails = () => {
             <i className=" mr-2 ri-play-fill"></i>
             Play <sub>Link 2</sub>
           </Link>
+          <h1 className="text-red-400 font-semibold mt-2">Note : Connect <a className="text-blue-600" target="_blank" href="https://1.1.1.1/">DNS</a> , If Link Not Working. </h1>
         </div>
       </div>
       <div className=" hidden sm:block w-full mb-5  text-white">
@@ -167,7 +169,7 @@ const MovieDetails = () => {
           {info.translations.join(" , ")}
         </p>
         <Link
-          className="px-3 py-2 inline-block bg-[#ffffdd] rounded-md text-black font-semibold"
+          className="px-3 mb-2 py-2 inline-block bg-[#ffffdd] rounded-md text-black font-semibold"
           to={`${pathname}/trailer`}
         >
           <i className=" mr-2 ri-play-fill"></i>
@@ -187,6 +189,7 @@ const MovieDetails = () => {
             <i className=" mr-2 ri-play-fill"></i>
             Play <sub>Link 2</sub>
           </Link>
+          <h1 className="text-red-400 font-semibold mt-2">Note : Connect <a className="text-blue-600" target="_blank" href="https://1.1.1.1/">DNS</a>  , If Link Not Working. </h1>
       </div>
       {/* part 3 watch providers */}
       {/* <div className="w-full h-[30vh] text-white"> */}

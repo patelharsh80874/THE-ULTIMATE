@@ -10,10 +10,10 @@ const PlyerThree = () => {
   var series =  pathname.split("/")[3];
   var season =  pathname.split("/")[5];
   var episode = pathname.split("/")[7];
-  console.log(pathname);
-  console.log(series);
-  console.log(season);
-  console.log(episode);
+  // console.log(pathname);
+  // console.log(series);
+  // console.log(season);
+  // console.log(episode);
 
 
   return (

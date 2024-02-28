@@ -50,7 +50,7 @@ export const Trending = () => {
     <div className=" w-screen  h-screen  bg-[#303030]">
       <div className=" px-5 sm:px-3 w-full flex   items-center bg-[#303030] ">
         <i
-          onClick={() => navigate(-1)}
+          onClick={() => navigate("/")}
           className="hover:text-[#ffffdd]  hover:bg-lime-500 text-3xl sm:text-2xl font-semibold mr-2 rounded-full mt-1 duration-300 cursor-pointer text-zinc-400 ri-arrow-left-line"
         ></i>
         <h1 className=" text-[1.8vw] sm:text-[4vw] font-semibold text-zinc-300">

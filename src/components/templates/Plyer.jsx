@@ -29,7 +29,7 @@ const Plyer = () => {
         // url={`https://www.braflix.video/movie/${ytvideo}`}
         url={`https://embed.smashystream.com/playere.php?tmdb=${ytvideo}`}
       /> */}
-
+     
       <iframe
       allowFullScreen
     //   sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"

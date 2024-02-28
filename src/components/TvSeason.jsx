@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "../utils/axios";
 import { Link, Outlet, useLocation, useParams } from "react-router-dom";
 import Loading from "./Loading";
+import noimg from "../../public/noimg.jpg";
 
 const TvSeason = () => {
   const { pathname } = useLocation();
@@ -25,7 +26,7 @@ const TvSeason = () => {
   //   console.log(series_id);
   //   console.log(details);
   //   console.log(id);
-  console.log(series);
+  // console.log(series);
   return details ? (
     <div
       style={{
@@ -61,7 +62,7 @@ const TvSeason = () => {
             <Link
               to={`/tv/details/${series}`}
             //   onClick={() => Navigate(-1)}
-              className="hover:text-[#ffffdd]  hover:bg-lime-500 text-3xl font-semibold mr-2 rounded-full mt-1 duration-300 cursor-pointer text-zinc-400 ri-close-fill absolute top-5 right-16"
+              className="hover:text-[#ffffdd]  hover:bg-lime-500 text-3xl font-semibold mr-2 rounded-full mt-1 duration-300 cursor-pointer text-red-800 ri-close-fill absolute top-5 right-16"
             ></Link>
           </div>
         </div>
@@ -74,16 +75,22 @@ const TvSeason = () => {
             key={i}
             className=" p-2 w-[20%] sm:w-[60%] h-full sm:h-[70%] flex-shrink-0 bg-zinc-800 rounded-lg"
           >
-            <img
+            {d.still_path ? <img
               className="w-full h-[60%] sm:h-[60%] rounded-lg"
               src={`https://image.tmdb.org/t/p/original/${d.still_path}`}
               alt=""
-            />
+            />: <img
+            className="w-full h-[60%] sm:h-[60%] rounded-lg"
+            src={noimg}
+            alt=""
+          />  }
+            
             <h3 className="font-semibold text-[1.3vw] sm:text-[4vw]">{d.name}</h3>
             <h4>Episode Number : {d.episode_number}</h4>
           </Link>
         ))}
       </div>
+      <h1 className="text-red-400 font-semibold mt-2">Note : Connect <a className="text-blue-600" target="_blank" href="https://1.1.1.1/">DNS</a> , If Link Not Working. </h1>
       <Outlet />
     </div>
   ) : (
