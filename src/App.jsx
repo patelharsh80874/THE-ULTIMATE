@@ -15,12 +15,14 @@ import Plyer from "./components/templates/Plyer";
 import PlyerTwo from "./components/templates/PlyerTwo";
 import TvSeason from "./components/TvSeason";
 import PlyerThree from "./components/templates/PlyerThree";
+import Notpage from "./components/Notpage";
 
 function App() {
   return (
     <>
       <div className=" bg-[#303030] flex w-full h-screen">
         <Routes>
+          
           <Route path="/" element={<Home />} />
           <Route path="/trending" element={<Trending />} />
           <Route path="/popular" element={<Popular />} />
@@ -41,6 +43,7 @@ function App() {
           <Route path="/person" element={<People />} />
           <Route path="/person/details/:id" element={<PersonDetails />} />
           <Route path="/MovieProvider" element={<MovieProvider />} />
+          <Route path="*" element={<Notpage/>} />
         </Routes>
       </div>
     </>

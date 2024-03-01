@@ -5,7 +5,7 @@ import noimg from "/noimg.jpg";
 function HorizontalCards({ data }) {
   const { pathname } = useLocation();
   return (
-    <div className=" w-full max-h-[100vh] sm:max-h-[40vh]  flex gap-5 overflow-x-auto mb-5 p-5 ">
+    <div className=" max-h-[100vh] sm:max-h-[40vh]  flex gap-5 overflow-x-auto mb-5 p-5 ">
       {data.length > 0 ? (
         data.map((d, i) => (
           <Link
@@ -17,10 +17,10 @@ function HorizontalCards({ data }) {
                   }`
             }
             key={i}
-            className="min-w-[25%] sm:min-w-[50%]   mb-3  flex flex-col gap-3 text-xl font-semibold bg-zinc-900 rounded"
+            className="min-w-[25%] max-w-[25%] sm:min-w-[50%]   mb-3  flex flex-col gap-3 text-xl font-semibold bg-zinc-900 rounded"
           >
             <img
-              className=" w-full max-h-[70%] rounded object-fill "
+              className="w-full max-h-[70%] min-h-[70%] rounded object-fill "
               src={
                 d.poster_path || d.backdrop_path || d.profile_path
                   ? `https://image.tmdb.org/t/p/original/${

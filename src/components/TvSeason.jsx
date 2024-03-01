@@ -68,7 +68,7 @@ const TvSeason = () => {
         </div>
       </div>
 
-      <div className=" text-white p-3 w-full h-[50vh] flex flex-shrink gap-3 overflow-x-auto overflow-hidden ">
+      <div className=" text-white p-3 w-full max-h-[60vh]  sm:min-h-[50vh] sm:max-h-[50vh] flex flex-shrink gap-3 overflow-x-auto overflow-hidden ">
         {details.episodes.map((d, i) => (
           <Link
             to={`${pathname}/episode/${d.episode_number}`}
