@@ -90,7 +90,7 @@ const TvSeason = () => {
           </Link>
         ))}
       </div>
-      <h1 className="text-red-400 font-semibold mt-2">Note : Connect <a className="text-blue-600" target="_blank" href="https://1.1.1.1/">DNS</a> , If Link Not Working. </h1>
+      <h1 className="text-red-400 font-semibold">Note : Connect <a className="text-blue-600" target="_blank" href="https://1.1.1.1/">DNS</a> , If Link Not Working. </h1>
       <Outlet />
     </div>
   ) : (

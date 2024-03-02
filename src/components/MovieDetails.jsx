@@ -265,7 +265,7 @@ const MovieDetails = () => {
 
       {/* part 4 recommendations and similar  */}
 
-      <div className="mt-5 ">
+      <div className="mt-5">
         <hr />
         <h1 className="text-2xl font-semibold text-white mt-3 ">
           Recommendations & Similar Stuff
