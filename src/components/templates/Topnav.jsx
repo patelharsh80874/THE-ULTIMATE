@@ -26,7 +26,7 @@ export const Topnav = ({ menuhendlaer, menuset }) => {
       <div className="w-full h-[15vh] sm:h-[5vh] relative flex justify-start gap-10 items-center ">
         <i
           onClick={() => menuhendlaer()}
-          className={` ml-3 hidden  ${pathname === "/" ? "sm:block" : "hidden"} z-50 menuicon  ${
+          className={` z-[100] ml-3 hidden  ${pathname === "/" ? "sm:block" : "hidden"} z-50 menuicon  ${
             menuset ? "ri-close-fill" : "ri-menu-line"
           } sm:text-[5vw] text-white`}
         ></i>
@@ -40,7 +40,7 @@ export const Topnav = ({ menuhendlaer, menuset }) => {
           id="search"
           placeholder="search anything"
         />
-        <div className=" z-[99] ml-24 w-[35vw] sm:right-0 sm:w-[50vw] max-h-[60vh]  bg-slate-200 absolute top-[100%] overflow-auto">
+        <div className=" z-[99]  ml-24 w-[35vw]  sm:w-[50vw] max-h-[60vh]  bg-slate-200 absolute top-[100%] overflow-auto">
           {searches ? (
             searches.map((s, i) => (
               <Link
@@ -60,7 +60,8 @@ export const Topnav = ({ menuhendlaer, menuset }) => {
                   alt=""
                 />
                 <span className=" text-[2vw] sm:text-[3vw]">
-                  {s.original_title || s.name || s.title || s.original_name}{" "}
+                  {/* {s.original_title || s.name || s.title || s.original_name} */}
+                  {s.title || s.name || s.original_title || s.original_name}
                   <br />
                   {s.release_date ? s.release_date : ""}
                 </span>

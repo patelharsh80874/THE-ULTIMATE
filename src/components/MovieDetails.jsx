@@ -76,10 +76,15 @@ const MovieDetails = () => {
         </div>
         <div className="w-[70%]  sm:hidden h-full text-white">
           <h1 className="text-4xl mb-2 font-black">
-            {info.detail.original_title ||
+            {/* {info.detail.original_title ||
               info.detail.name ||
               info.detail.title ||
+              info.detail.original_name} */}
+               {info.detail.title ||
+              info.detail.original_title ||
+              info.detail.name ||
               info.detail.original_name}
+             
             <small className="text-xl font-semibold text-zinc-300">
               ({info.detail.release_date.split("-")[0]})
             </small>
@@ -133,10 +138,14 @@ const MovieDetails = () => {
       </div>
       <div className=" hidden sm:block w-full mb-5  text-white">
         <h1 className="text-4xl sm:text-2xl mb-2 font-black">
-          {info.detail.original_title ||
+          {/* {info.detail.original_title ||
             info.detail.name ||
             info.detail.title ||
-            info.detail.original_name}
+            info.detail.original_name} */}
+             {info.detail.title ||
+              info.detail.original_title ||
+              info.detail.name ||
+              info.detail.original_name}
           <small className="text-xl font-semibold text-zinc-300">
             ({info.detail.release_date.split("-")[0]})
           </small>

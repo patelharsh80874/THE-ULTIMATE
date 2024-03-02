@@ -32,7 +32,7 @@ function HorizontalCards({ data }) {
             />
             <div className="w-full h-[30%] overflow-hidden">
               <h1 className="text-white text-[1.5vw] sm:leading-none sm:text-[4vw] pl-3">
-                {d.original_title || d.title || d.name || d.original_name}
+                {d.title || d.original_title   || d.name || d.original_name}
               </h1>
               <p className=" text-zinc-400 text-[1vw] sm:text-[2vw] leading-none pl-3 mt-[10px]">
                 {d.overview.slice(0, 70)}...
