@@ -4,8 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import noimg from "/noimg.jpg";
 
 export const Topnav = ({ menuhendlaer, menuset }) => {
-  let  {pathname
-  }  = useLocation();
+  let { pathname } = useLocation();
   const [query, setquery] = useState("");
   const [searches, setsearches] = useState([]);
   const Getserches = async () => {
@@ -20,18 +19,24 @@ export const Topnav = ({ menuhendlaer, menuset }) => {
   useEffect(() => {
     Getserches();
   }, [query]);
-  
+
   return (
     <>
       <div className="w-full h-[15vh] sm:h-[5vh] relative flex justify-start gap-10 items-center ">
         <i
           onClick={() => menuhendlaer()}
-          className={` z-[100] ml-3 hidden  ${pathname === "/" ? "sm:block" : "hidden"} z-50 menuicon  ${
+          className={` z-[100] ml-3 hidden  ${
+            pathname === "/" ? "sm:block" : "hidden"
+          } z-50 menuicon  ${
             menuset ? "ri-close-fill" : "ri-menu-line"
           } sm:text-[5vw] text-white`}
         ></i>
 
-        <i className={` ${pathname === "/" ? "sm:block" : "sm:hidden"} ml-[1vw] text-zinc-300 text-[2vw] sm:text-[3vw] ri-search-line`}></i>
+        <i
+          className={` ${
+            pathname === "/" ? "sm:block" : "sm:hidden"
+          } ml-[1vw] text-zinc-300 text-[2vw] sm:text-[3vw] ri-search-line`}
+        ></i>
         <input
           onChange={(e) => setquery(e.target.value)}
           value={query}
@@ -40,7 +45,7 @@ export const Topnav = ({ menuhendlaer, menuset }) => {
           id="search"
           placeholder="search anything"
         />
-        <div className=" z-[99]  ml-24 w-[35vw]  sm:w-[50vw] max-h-[60vh]  bg-slate-200 absolute top-[100%] overflow-auto">
+        <div className={`${pathname === "/" ? "ml-24" : ""} z-[99]  w-[35vw]  sm:w-[50vw] max-h-[60vh]  bg-slate-200 absolute top-[100%] overflow-auto`}>
           {searches ? (
             searches.map((s, i) => (
               <Link

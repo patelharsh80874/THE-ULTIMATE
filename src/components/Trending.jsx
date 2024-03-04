@@ -48,15 +48,18 @@ export const Trending = () => {
 
   return trending.length > 0 ? (
     <div className=" w-screen  h-screen  bg-[#303030]">
-      <div className=" px-5 sm:px-3 w-full flex   items-center bg-[#303030] ">
+      <div className="relative px-5 sm:px-3 w-full flex   items-center bg-[#303030] ">
         <i
           onClick={() => navigate("/")}
           className="hover:text-[#ffffdd]  hover:bg-lime-500 text-3xl sm:text-2xl font-semibold mr-2 rounded-full mt-1 duration-300 cursor-pointer text-zinc-400 ri-arrow-left-line"
         ></i>
         <h1 className=" text-[1.8vw] sm:text-[4vw] font-semibold text-zinc-300">
-          Trending <small className="text-zinc-500">({category})</small>
+          Trending <br /> <small className="text-zinc-500">({category})</small>
         </h1> 
+        {/* <div className="absolute left-[45%]"> */}
         <Topnav />
+        {/* </div> */}
+        
         <div className="sm:hidden flex gap-5">
           <Dropdown
             title="Category"

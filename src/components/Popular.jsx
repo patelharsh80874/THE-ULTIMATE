@@ -54,7 +54,7 @@ export const Popular = () => {
           className="hover:text-[#ffffdd]  hover:bg-lime-500 text-3xl font-semibold mr-2 rounded-full mt-1 duration-300 cursor-pointer text-zinc-400 ri-arrow-left-line"
         ></i>
         <h1 className=" w-[20%] text-2xl leading-none mr-3 font-semibold text-zinc-300">
-          Popular <small className="text-zinc-500">({category})</small>
+          Popular <br /> <small className="text-zinc-500">({category})</small>
         </h1>
         <Topnav />
         <div className="sm:hidden flex gap-5">

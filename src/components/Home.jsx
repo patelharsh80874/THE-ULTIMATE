@@ -49,6 +49,7 @@ export const Home = () => {
     <>
       <Sidenav menuset={menuset} />
       <div className="w-[80%] sm:w-full min-h-full overflow-auto overflow-x-hidden ">
+        
         <Topnav menuhendlaer={menuhendlaer}  menuset={menuset} />
         <Header data={wallpaper} />
 

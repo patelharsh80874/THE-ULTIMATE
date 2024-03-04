@@ -54,7 +54,7 @@ export const Tvshows = () => {
           className="hover:text-[#ffffdd]  hover:bg-lime-500 text-3xl font-semibold mr-2 rounded-full mt-1 duration-300 cursor-pointer text-zinc-400 ri-arrow-left-line"
         ></i>
         <h1 className="text-2xl font-semibold text-zinc-300">
-          tv<small className="text-zinc-500">({category})</small>
+          tv <br /><small className="text-zinc-500">({category})</small>
         </h1>
         <Topnav />
         <div className=" sm:hidden flex gap-5">
