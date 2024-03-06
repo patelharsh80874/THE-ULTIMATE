@@ -6,7 +6,7 @@ import { Header } from "./templates/Header";
 import HorizontalCards from "./templates/HorizontalCards";
 import Loading from "./Loading";
 import { Dropdown } from "./templates/Dropdown";
-import Ads from "../../Ads";
+
 
 export const Home = () => {
   document.title = "THE ULTIMATE | Homepage";
@@ -63,7 +63,7 @@ export const Home = () => {
           />
         </div>
         <HorizontalCards data={trending} />
-        <Ads/>
+        
       </div>
     </>
   ) : (
