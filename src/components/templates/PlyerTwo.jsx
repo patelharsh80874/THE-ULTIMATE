@@ -27,6 +27,7 @@ const PlyerTwo = () => {
         /> */}
   
         <iframe
+        sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"
         allowFullScreen
           className="w-[90vw] sm:h-[80vh] h-[80vh] "
           src={`https://embed.smashystream.com/playere.php?tmdb=${ytvideo}`}

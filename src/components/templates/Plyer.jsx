@@ -31,6 +31,7 @@ const Plyer = () => {
       /> */}
      
       <iframe
+      sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"
       allowFullScreen
     //   sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"
         className="w-[90vw] sm:h-[80vh] h-[80vh] "
