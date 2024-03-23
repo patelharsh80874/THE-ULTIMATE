@@ -24,7 +24,7 @@ const PlyerThree = () => {
       ></Link>
 
       <iframe
-        sandbox="allow-same-origin allow-scripts allow-forms"
+        // sandbox="allow-same-origin allow-scripts"
         allowFullScreen
         className="w-[90vw] sm:h-[80vh] h-[80vh] "
         src={`https://embed.smashystream.com/playere.php?tmdb=${series}&season=${season}&episode=${episode}`}
