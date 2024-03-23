@@ -7,14 +7,13 @@ import Notfound from "../Notfound";
 const PlyerThree = () => {
   const Navigate = useNavigate();
   const { pathname } = useLocation();
-  var series =  pathname.split("/")[3];
-  var season =  pathname.split("/")[5];
+  var series = pathname.split("/")[3];
+  var season = pathname.split("/")[5];
   var episode = pathname.split("/")[7];
   // console.log(pathname);
   // console.log(series);
   // console.log(season);
   // console.log(episode);
-
 
   return (
     <div className="absolute top-0 left-0 bg-[rgba(0,0,0,0.9)] text-white w-screen h-screen flex items-center justify-center">
@@ -25,7 +24,7 @@ const PlyerThree = () => {
       ></Link>
 
       <iframe
-     
+        sandbox="allow-same-origin allow-scripts allow-forms"
         allowFullScreen
         className="w-[90vw] sm:h-[80vh] h-[80vh] "
         src={`https://embed.smashystream.com/playere.php?tmdb=${series}&season=${season}&episode=${episode}`}
