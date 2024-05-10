@@ -1,3 +1,7 @@
+All trademarks and copyrights belong to their respective owners. All media and images are the property of their respective owners. This site is for educational purposes only.
+
+
+
 Live link : the-ultimate-app-harsh-patel.vercel.app
 
 <img width="959" alt="the ultimate" src="https://github.com/patelharsh80874/THE-ULTIMATE/assets/110234600/4cfcd40e-4540-461f-b99c-160ab49e1f28">
