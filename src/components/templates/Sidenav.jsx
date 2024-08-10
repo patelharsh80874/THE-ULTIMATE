@@ -44,7 +44,7 @@ export const Sidenav = ({menuset}) => {
           <h1>MADE BY ❤️ HARSH PATEL</h1>
           <a
             target="_blank"
-            href="https://www.instagram.com/harsh_patel_80874/"
+            href="https://www.instagram.com/patelharsh.in/"
           >
             <i className=" ri-instagram-fill"></i>
           </a>

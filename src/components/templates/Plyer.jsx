@@ -35,7 +35,7 @@ const Plyer = () => {
     //   sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"
         className="w-[90vw] sm:h-[80vh] h-[80vh] "
         // src={`https://embed.smashystream.com/playere.php?tmdb=${ytvideo}`}
-        src={category == "tv" ? `https://vidsrc.to/embed/tv/${ytvideo}`: `https://vidsrc.to/embed/movie/${ytvideo}`}
+        src={category == "tv" ? `https://vidsrc.cc/v2/embed/tv/${ytvideo}`: `https://vidsrc.cc/v2/embed/movie/${ytvideo}`}
         // src={`https://vidsrc.to/embed/movie/${ytvideo}`}
       ></iframe>
       {/* <iframe
