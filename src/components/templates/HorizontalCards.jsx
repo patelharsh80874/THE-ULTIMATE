@@ -35,7 +35,8 @@ function HorizontalCards({ data }) {
                 {d.title || d.original_title   || d.name || d.original_name}
               </h1>
               <p className=" text-zinc-400 text-[1vw] sm:text-[2vw] leading-none pl-3 mt-[10px]">
-                {d.overview.slice(0, 70)}...
+                {/* {d.overview.slice(0, 70)}... */}
+                {String(d.overview).slice(0, 70)}...
                 <span className="text-blue-600">more</span>
               </p>
             </div>
